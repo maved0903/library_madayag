@@ -1,5 +1,5 @@
 # Library API Documentation
----
+
 ## Description
 This system is a web API application built with the Slim Framework and uses JWT (JSON Web Token) for authentication and authorization. This system allows users to manage a library database with the following functionality:
 
