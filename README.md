@@ -225,7 +225,7 @@ This system is a web API application built with the Slim Framework and uses JWT 
             }
             ```
 ---
-6. ### Add an Author's Name
+6. ### Add an Author
     - **Endpoint:** `/author/add`  
     - **Method:** `POST`  
     - **Description:**  
@@ -470,7 +470,7 @@ This system is a web API application built with the Slim Framework and uses JWT 
             }
             ```
 ---
-12. ### Delete a Book by Title
+12. ### Delete a Book 
     - **Endpoint:** `/book/delete`
     - **Method:** `DELETE`
     - **Description:**  
