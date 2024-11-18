@@ -1,0 +1,20 @@
+POST   	127.0.0.1/library/public/user/register		(username, password)
+POST   	127.0.0.1/library/public/user/authenticate	(username, password)
+PUT    	127.0.0.1/library/public/user/update  		(username, new_username, new_password)
+GET	127.0.0.1/library/public/user/display
+DELETE 	127.0.0.1/library/public/user/delete		(username)
+
+POST    127.0.0.1/library/public/author/add		(name)
+PUT 	127.0.0.1/library/public/author/update		(old_name, new_name)
+GET 	127.0.0.1/library/public/author/display
+DELETE	127.0.0.1/library/public/author/delete		(name)
+
+POST	127.0.0.1/library/public/book/add		(title, authorId)
+PUT	127.0.0.1/library/public/book/update		(old_title, new_title)
+GET	127.0.0.1/library/public/book/display		
+DELETE	127.0.0.1/library/public/book/delete		(title)
+
+POST	127.0.0.1/library/public/books_authors/add	(bookId, authorId)
+PUT	127.0.0.1/library/public/books_authors/update	(collectionId, new_bookId, new_authorId)
+GET	127.0.0.1/library/public/books_authors/display	
+DELETE	127.0.0.1/library/public/books_authors/delete	(bookId, authorId)
