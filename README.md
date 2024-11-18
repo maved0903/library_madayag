@@ -156,7 +156,7 @@ This system is a web API application built with the Slim Framework and uses JWT 
     - **Endpoint:** `/user/delete`  
     - **Method:** `DELETE`  
     - **Description:**  
-      This API endpoint allows users to delete their account by providing their username. It first verifies if the username exists in the database and matches the logged-in user's account, then proceeds to delete the user account. Upon successful deletion, a new JWT token is generated to invalidate the old token.
+      This API endpoint allows users to delete their account by providing their username. It first verifies if the username exists in the database, then proceeds to delete the user account. Upon successful deletion, a new JWT token is generated to invalidate the old token.
     
     - **Sample Request (JSON):**
         ```json
@@ -193,7 +193,7 @@ This system is a web API application built with the Slim Framework and uses JWT 
     - **Endpoint:** `/user/display`  
     - **Method:** `GET`  
     - **Description:**  
-      This API endpoint allows users to retrieve their account information or display all users. This endpoint requires an **Authorization** header with a valid JSON Web Token (JWT). A new token is generated and returned with the response.
+      This API endpoint allows users to retrieve and display all users. This endpoint requires an **Authorization** header with a valid JSON Web Token (JWT).If successful, a new token is generated and returned with the response.
     
     - **Sample Request:**
         ```json
@@ -229,7 +229,7 @@ This system is a web API application built with the Slim Framework and uses JWT 
     - **Endpoint:** `/author/add`  
     - **Method:** `POST`  
     - **Description:**  
-      This API endpoint allows users to add a new author by providing the author's name. It first checks if the name is valid and not empty. The system also verifies that the author's name does not already exist in the database before inserting a new author. After successfully adding the author, a new JWT token is generated to invalidate the old token.
+      This API endpoint enables users to add a new author by specifying the author's name. It ensures the name is valid and not empty, and checks that the author does not already exist in the database before proceeding with the insertion. Once the author is successfully added, the system generates a new JWT token and revokes the previous one.
     
     - **Sample Request (JSON):**
         ```json
@@ -341,7 +341,7 @@ This system is a web API application built with the Slim Framework and uses JWT 
     - **Endpoint:** `/author/display`  
     - **Method:** `GET`  
     - **Description:**  
-      This API endpoint retrieves a list of all authors in the system. It fetches the details of every author stored in the database. The current JWT token is invalidated, and a new JWT token is generated for the user after displaying.
+      This API endpoint provides a list of all authors in the system by retrieving their details from the database. After the authors are displayed, the existing JWT token is revoked, and a new token is issued to the user.
     
     - **Sample Request:**
         ```json
@@ -656,7 +656,7 @@ This system is a web API application built with the Slim Framework and uses JWT 
     - **Endpoint:** `/books_authors/delete`
     - **Method:** `DELETE`
     - **Description:**  
-      This API endpoint allows a user to delete an existing book-author relationship from the database. The `collectionId` must be provided in the request body to identify the record to delete.  Upon successful deletion, the system will revoke the current token and return a new token for further authentication.
+      This API endpoint enables users to remove an existing book-author relationship from the database. The request body must include the collectionId to specify the record to be deleted. After the deletion is successfully completed, the current token is revoked, and a new token is issued for continued authentication.
     
     - **Sample Request:**
         ```json
